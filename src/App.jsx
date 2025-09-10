@@ -175,17 +175,18 @@ const App = () => {
             Magnates Agency
           </div>
           <nav className="hidden md:flex space-x-8">
-            {['Home', 'Packages', 'Case Studies', 'About', 'Contact'].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                className={`hover:text-purple-400 transition-colors duration-200 ${
-                  activeSection === item.toLowerCase().replace(' ', '-') ? 'text-purple-400' : ''
-                }`}
-              >
-                {item}
-              </button>
-            ))}
+           {['Home', 'Packages', 'Case Studies', 'About', 'Contact'].map((item) => (
+  <button
+    key={item}
+    onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+    className={`hover:text-purple-400 transition-colors duration-200 ${
+      activeSection === item.toLowerCase().replace(' ', '-') ? "text-purple-400" : ""
+    }`}
+  >
+    {item}
+  </button>
+))}
+
           </nav>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
