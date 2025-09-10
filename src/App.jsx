@@ -89,51 +89,19 @@ const App = () => {
       id: 1,
       title: "How AI Follow-Up Doubles Local Business Revenue",
       date: "April 15, 2024",
-      content: `In this comprehensive analysis, we break down the exact AI follow-up system that helped our client increase revenue by 112% in just 90 days. The key wasn't just automation technology—it was the strategic implementation of multi-channel follow-up sequences that engaged leads at precisely the right moments.
-
-Our client, a home services contractor, was missing over 60% of their inbound leads due to slow response times. We implemented an AI system that responds to every inquiry within 30 seconds across multiple channels—website chat, SMS, and Facebook Messenger.
-
-The AI doesn't just say "Hello"—it qualifies leads by asking strategic questions, schedules appointments directly into the client's calendar, and sends automated follow-ups if leads don't convert immediately. For leads that need nurturing, the system deploys a 7-day email and SMS sequence with personalized content based on the lead's specific needs.
-
-What's remarkable is that this system works while the business owner sleeps. After implementation, response time dropped from 45 minutes to 22 seconds, lead-to-customer conversion increased from 18% to 39%, and monthly revenue grew from $42,000 to $89,000.
-
-The best part? This isn't custom enterprise software. We built this using existing AI tools configured in a proprietary way that most agencies don't understand. And we can implement a similar system for your business in as little as 72 hours.`
+      content: "In this comprehensive analysis, we break down the exact AI follow-up system that helped our client increase revenue by 112% in just 90 days. The key wasn't just automation technology—it was the strategic implementation of multi-channel follow-up sequences that engaged leads at precisely the right moments. Our client, a home services contractor, was missing over 60% of their inbound leads due to slow response times. We implemented an AI system that responds to every inquiry within 30 seconds across multiple channels—website chat, SMS, and Facebook Messenger. The AI doesn't just say "Hello"—it qualifies leads by asking strategic questions, schedules appointments directly into the client's calendar, and sends automated follow-ups if leads don't convert immediately. For leads that need nurturing, the system deploys a 7-day email and SMS sequence with personalized content based on the lead's specific needs. What's remarkable is that this system works while the business owner sleeps. After implementation, response time dropped from 45 minutes to 22 seconds, lead-to-customer conversion increased from 18% to 39%, and monthly revenue grew from $42,000 to $89,000. The best part? This isn't custom enterprise software. We built this using existing AI tools configured in a proprietary way that most agencies don't understand. And we can implement a similar system for your business in as little as 72 hours."
     },
     {
       id: 2,
       title: "Top 5 Ways AI Saves Small Businesses 30+ Hours/Month",
       date: "March 28, 2024",
-      content: `Time is your most valuable asset, yet most small business owners waste dozens of hours each month on tasks that could—and should—be automated. In our work with over 200 businesses, we've identified the 5 highest-impact AI automations that consistently save our clients at least 30 hours per month.
-
-1. Automated Lead Response: 80% of leads convert when contacted within 5 minutes, but most businesses take hours. Our AI systems respond to every lead in under 30 seconds, qualifying them and booking appointments—saving 8-12 hours weekly.
-
-2. Intelligent Email Management: AI that sorts, prioritizes, and drafts responses to your emails can eliminate 3-5 hours of weekly inbox management. Our clients report a 70% reduction in time spent on email.
-
-3. Content Creation at Scale: Whether it's social media posts, blog articles, or marketing emails, AI can generate high-quality content 10x faster than humans. One client produces a month's worth of content in a single afternoon.
-
-4. Meeting Scheduling Automation: No more back-and-forth emails. AI assistants coordinate availability, send calendar invites, and even prepare meeting agendas—saving 4-6 hours monthly.
-
-5. Customer Service Automation: AI chatbots handle 60-80% of routine customer inquiries, freeing up your team for complex issues. One e-commerce client reduced support tickets by 72% while improving response times.
-
-The businesses that implement these five automations don't just save time—they gain a competitive advantage. They can respond faster, serve more customers, and scale without hiring additional staff. And the setup? Much simpler than you think.`
+      content: "Time is your most valuable asset, yet most small business owners waste dozens of hours each month on tasks that could—and should—be automated. In our work with over 200 businesses, we've identified the 5 highest-impact AI automations that consistently save our clients at least 30 hours per month. 1. Automated Lead Response: 80% of leads convert when contacted within 5 minutes, but most businesses take hours. Our AI systems respond to every lead in under 30 seconds, qualifying them and booking appointments—saving 8-12 hours weekly. 2. Intelligent Email Management: AI that sorts, prioritizes, and drafts responses to your emails can eliminate 3-5 hours of weekly inbox management. Our clients report a 70% reduction in time spent on email. 3. Content Creation at Scale: Whether it's social media posts, blog articles, or marketing emails, AI can generate high-quality content 10x faster than humans. One client produces a month's worth of content in a single afternoon. 4. Meeting Scheduling Automation: No more back-and-forth emails. AI assistants coordinate availability, send calendar invites, and even prepare meeting agendas—saving 4-6 hours monthly. 5. Customer Service Automation: AI chatbots handle 60-80% of routine customer inquiries, freeing up your team for complex issues. One e-commerce client reduced support tickets by 72% while improving response times. The businesses that implement these five automations don't just save time—they gain a competitive advantage. They can respond faster, serve more customers, and scale without hiring additional staff. And the setup? Much simpler than you think."
     },
     {
       id: 3,
       title: "The Future of Customer Support: AI-First Approach",
       date: "March 10, 2024",
-      content: `The customer support landscape is undergoing a revolution. No longer is 24/7 support a luxury—it's becoming an expectation. And AI is making it possible for businesses of all sizes to provide instant, intelligent support around the clock.
-
-In this deep dive, we explore how leading companies are implementing AI-first support systems that handle 80% of customer inquiries without human intervention, while actually improving customer satisfaction scores.
-
-The key is moving from reactive to proactive support. Instead of waiting for customers to contact you with problems, AI systems monitor customer behavior and reach out with solutions before issues arise. For example, if a customer abandons their shopping cart, AI doesn't just send a generic reminder—it analyzes why they left and offers a personalized solution.
-
-Our proprietary AI support systems use natural language processing to understand customer intent, not just keywords. This means they can handle complex inquiries, not just simple FAQs. One client in the SaaS industry reduced their support response time from 14 hours to 48 seconds, while increasing customer satisfaction from 78% to 94%.
-
-But the real game-changer is the learning capability. These systems get smarter with every interaction, analyzing thousands of support conversations to identify patterns and improve responses. They also integrate seamlessly with your CRM, so when a human does need to intervene, they have full context of the customer's journey.
-
-The ROI is compelling: one e-commerce client reduced their support costs by 63% while handling 3x the volume of inquiries. Another B2B company increased upsell revenue by 29% because their AI support system could identify expansion opportunities during routine support interactions.
-
-This isn't the future—it's available today. And businesses that adopt AI-first support now will have a significant competitive advantage over those waiting.`
+      content: "The customer support landscape is undergoing a revolution. No longer is 24/7 support a luxury—it's becoming an expectation. And AI is making it possible for businesses of all sizes to provide instant, intelligent support around the clock. In this deep dive, we explore how leading companies are implementing AI-first support systems that handle 80% of customer inquiries without human intervention, while actually improving customer satisfaction scores. The key is moving from reactive to proactive support. Instead of waiting for customers to contact you with problems, AI systems monitor customer behavior and reach out with solutions before issues arise. For example, if a customer abandons their shopping cart, AI doesn't just send a generic reminder—it analyzes why they left and offers a personalized solution. Our proprietary AI support systems use natural language processing to understand customer intent, not just keywords. This means they can handle complex inquiries, not just simple FAQs. One client in the SaaS industry reduced their support response time from 14 hours to 48 seconds, while increasing customer satisfaction from 78% to 94%. But the real game-changer is the learning capability. These systems get smarter with every interaction, analyzing thousands of support conversations to identify patterns and improve responses. They also integrate seamlessly with your CRM, so when a human does need to intervene, they have full context of the customer's journey. The ROI is compelling: one e-commerce client reduced their support costs by 63% while handling 3x the volume of inquiries. Another B2B company increased upsell revenue by 29% because their AI support system could identify expansion opportunities during routine support interactions. This isn't the future—it's available today. And businesses that adopt AI-first support now will have a significant competitive advantage over those waiting."
     }
   ];
 
@@ -626,7 +594,7 @@ This isn't the future—it's available today. And businesses that adopt AI-first
                 type="text"
                 placeholder="Your Name"
                 value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                onChange={(e) = /> setFormData({...formData, name: e.target.value})}
                 required
                 className="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
               />
@@ -634,7 +602,7 @@ This isn't the future—it's available today. And businesses that adopt AI-first
                 type="email"
                 placeholder="Your Email"
                 value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                onChange={(e) = /> setFormData({...formData, email: e.target.value})}
                 required
                 className="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
               />
@@ -856,7 +824,7 @@ This isn't the future—it's available today. And businesses that adopt AI-first
                     type="text"
                     placeholder="Your Name"
                     value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    onChange={(e) = /> setFormData({...formData, name: e.target.value})}
                     required
                     className="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
                   />
@@ -864,7 +832,7 @@ This isn't the future—it's available today. And businesses that adopt AI-first
                     type="email"
                     placeholder="Your Email"
                     value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    onChange={(e) = /> setFormData({...formData, email: e.target.value})}
                     required
                     className="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
                   />
