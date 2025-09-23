@@ -1,7 +1,7 @@
 ```jsx
 import React, { useState, useRef, useEffect } from "react";
 
-const App = () => {
+const App = () =>{
   const [showCalendly, setShowCalendly] = useState(false);
   const [showLeadMagnet, setShowLeadMagnet] = useState(false);
   const [showServicesModal, setShowServicesModal] = useState(false);
@@ -105,7 +105,7 @@ const App = () => {
     }
   ];
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId) =>{
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -113,11 +113,11 @@ const App = () => {
     setIsMenuOpen(false);
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = (e) =>{
     e.preventDefault();
     console.log('Form submitted:', formData);
     setFormSubmitted(true);
-    setTimeout(() => {
+    setTimeout(() =>{
       setShowLeadMagnet(false);
       setFormSubmitted(false);
       setFormData({ name: '', email: '' });
@@ -125,8 +125,8 @@ const App = () => {
   };
 
   // Close modals when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
+  useEffect(() =>{
+    const handleClickOutside = (event) =>{
       if (modalRef.current && !modalRef.current.contains(event.target)) {
         setShowCalendly(false);
         setShowServicesModal(false);
@@ -135,15 +135,15 @@ const App = () => {
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    return () =>document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   // Simulate scroll tracking
-  useEffect(() => {
-    const handleScroll = () => {
+  useEffect(() =>{
+    const handleScroll = () =>{
       const sections = ['hero', 'social-proof', 'pain-point', 'how-it-works', 'why-choose', 'services', 'packages', 'case-studies', 'testimonials', 'industries', 'faq', 'guarantee', 'about', 'blog', 'lead-magnet'];
       
-      const currentSection = sections.find(section => {
+      const currentSection = sections.find(section =>{
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -158,7 +158,7 @@ const App = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () =>window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -175,21 +175,20 @@ const App = () => {
             Magnates Agency
           </div>
           <nav className="hidden md:flex space-x-8">
-           {['Home', 'Packages', 'Case Studies', 'About', 'Contact'].map((item) => (
-  <button
-    key={item}
-    onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-    className={`hover:text-purple-400 transition-colors duration-200 ${
-      activeSection === item.toLowerCase().replace(' ', '-') ? "text-purple-400" : ""
-    }`}
-  >
-    {item}
-  </button>
-))}
-
+            {['Home', 'Packages', 'Case Studies', 'About', 'Contact'].map((item) =>(
+              <button
+                key={item}
+                onClick={() =>scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                className={`hover:text-purple-400 transition-colors duration-200 ${
+                  activeSection === item.toLowerCase().replace(' ', '-') ? 'text-purple-400' : ''
+                }`}
+              >
+                {item}
+              </button>
+            ))}
           </nav>
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() =>setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-white"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -202,10 +201,10 @@ const App = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-sm border-t border-purple-500/20">
             <div className="px-6 py-4 space-y-4">
-              {['Home', 'Packages', 'Case Studies', 'About', 'Contact'].map((item) => (
+              {['Home', 'Packages', 'Case Studies', 'About', 'Contact'].map((item) =>(
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                  onClick={() =>scrollToSection(item.toLowerCase().replace(' ', '-'))}
                   className="block w-full text-left hover:text-purple-400 transition-colors duration-200"
                 >
                   {item}
@@ -231,13 +230,13 @@ const App = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <button
-              onClick={() => setShowCalendly(true)}
+              onClick={() =>setShowCalendly(true)}
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg"
             >
               🚀 Book Free Consultation
             </button>
             <button
-              onClick={() => scrollToSection('packages')}
+              onClick={() =>scrollToSection('packages')}
               className="px-8 py-4 border-2 border-purple-500 text-purple-400 hover:bg-purple-500/20 font-semibold rounded-xl transition-all duration-300 text-lg"
             >
               📦 See Packages
@@ -251,7 +250,7 @@ const App = () => {
         <div className="max-w-6xl mx-auto">
           <p className="text-center text-gray-400 mb-8">Trusted by growth-focused businesses across the US.</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
-            {['Google', 'HubSpot', 'Meta', 'Stripe', 'Shopify', 'GoHighLevel', 'WhatsApp'].map((logo) => (
+            {['Google', 'HubSpot', 'Meta', 'Stripe', 'Shopify', 'GoHighLevel', 'WhatsApp'].map((logo) =>(
               <div key={logo} className="text-2xl font-bold text-gray-600">{logo}</div>
             ))}
           </div>
@@ -270,7 +269,7 @@ const App = () => {
             <p>• Manual staff = wasted costs + human error.</p>
           </div>
           <button
-            onClick={() => scrollToSection('how-it-works')}
+            onClick={() =>scrollToSection('how-it-works')}
             className="mt-10 px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             See How AI Fixes This
@@ -289,7 +288,7 @@ const App = () => {
               "Discovery Call: We analyze your workflows & uncover automation opportunities.",
               "Custom AI Build: We design & implement a tailored automation system.",
               "Launch & Support: We optimize, track results, and scale growth with you."
-            ].map((step, index) => (
+            ].map((step, index) =>(
               <div key={index} className="bg-black/50 backdrop-blur-sm p-6 rounded-2xl border border-purple-500/20">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-xl font-bold mb-4">
                   {index + 1}
@@ -300,7 +299,7 @@ const App = () => {
           </div>
           <div className="text-center mt-12">
             <button
-              onClick={() => setShowCalendly(true)}
+              onClick={() =>setShowCalendly(true)}
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               Schedule Free Call
@@ -321,14 +320,14 @@ const App = () => {
               "🤖 Never miss a call, message, or lead again",
               "📈 ROI-focused automations tailored to your industry",
               "🔒 US-based team with proven case studies"
-            ].map((item, index) => (
+            ].map((item, index) =>(
               <div key={index} className="p-6 rounded-xl bg-black/50 border border-purple-500/20">
                 <p className="text-gray-300">{item}</p>
               </div>
             ))}
           </div>
           <button
-            onClick={() => setShowCalendly(true)}
+            onClick={() =>setShowCalendly(true)}
             className="mt-12 px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Book Free Consultation
@@ -351,7 +350,7 @@ const App = () => {
               "Calendar & Booking Automation (Perfect for clinics, real estate, contractors, lawyers)",
               "Multi-Channel Support Automation (24/7 across platforms)",
               "Data & Analytics Dashboard (Track ROI, conversions, and performance in real time)"
-            ].map((service, index) => (
+            ].map((service, index) =>(
               <div key={index} className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
                 <p className="text-gray-300">{service}</p>
@@ -360,7 +359,7 @@ const App = () => {
           </div>
           <div className="text-center mt-12">
             <button
-              onClick={() => setShowServicesModal(true)}
+              onClick={() =>setShowServicesModal(true)}
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               Explore Services
@@ -376,7 +375,7 @@ const App = () => {
             Choose Your <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Automation Path</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {packages.map((pkg, index) => (
+            {packages.map((pkg, index) =>(
               <div key={index} className="bg-black/70 backdrop-blur-sm p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300">
                 <h3 className="text-2xl font-bold mb-2 text-white">{pkg.name}</h3>
                 <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -384,7 +383,7 @@ const App = () => {
                 </div>
                 <p className="text-gray-400 mb-6">{pkg.subtitle}</p>
                 <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feature, i) => (
+                  {pkg.features.map((feature, i) =>(
                     <li key={i} className="text-gray-300 flex items-start space-x-2">
                       <span className="text-green-400 mt-1">•</span>
                       <span>{feature}</span>
@@ -392,7 +391,7 @@ const App = () => {
                   ))}
                 </ul>
                 <button
-                  onClick={() => setShowCalendly(true)}
+                  onClick={() =>setShowCalendly(true)}
                   className="w-full py-3 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300"
                 >
                   {pkg.cta}
@@ -401,7 +400,7 @@ const App = () => {
             ))}
           </div>
           <div className="text-center mt-8 text-gray-400">
-            <p>👉 "Not sure which plan fits? → <button onClick={() => setShowCalendly(true)} className="text-purple-400 hover:underline">Book Free Consultation</button>."</p>
+            <p>👉 "Not sure which plan fits? → <button onClick={() =>setShowCalendly(true)} className="text-purple-400 hover:underline">Book Free Consultation</button>."</p>
           </div>
         </div>
       </section>
@@ -418,14 +417,14 @@ const App = () => {
               "Contractor: 2× inbound leads within 30 days",
               "Realtor: 30% more closings without extra staff",
               "Law Firm: 24/7 client intake with zero extra hires"
-            ].map((study, index) => (
+            ].map((study, index) =>(
               <div key={index} className="p-6 rounded-xl bg-black/50 border border-purple-500/20">
                 <p className="text-gray-300">{study}</p>
               </div>
             ))}
           </div>
           <button
-            onClick={() => setShowCalendly(true)}
+            onClick={() =>setShowCalendly(true)}
             className="mt-12 px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             See If AI Fits My Business
@@ -440,7 +439,7 @@ const App = () => {
             What Our <span className="text-purple-400">Clients Say</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) =>(
               <div key={index} className="bg-black/70 backdrop-blur-sm p-6 rounded-2xl border border-purple-500/20">
                 <p className="text-gray-300 mb-4 italic">"{testimonial.text}"</p>
                 <p className="text-purple-400 font-semibold">— {testimonial.author}</p>
@@ -464,7 +463,7 @@ const App = () => {
               "Law Firms → Automated client intake + scheduling.",
               "E-commerce & Retail → Abandoned cart recovery + customer support.",
               "Restaurants & Hospitality → Reservation bots + review follow-up."
-            ].map((industry, index) => (
+            ].map((industry, index) =>(
               <div key={index} className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
                 <p className="text-gray-300">{industry}</p>
@@ -473,7 +472,7 @@ const App = () => {
           </div>
           <div className="text-center mt-12">
             <button
-              onClick={() => setShowCalendly(true)}
+              onClick={() =>setShowCalendly(true)}
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               See How AI Fits My Industry
@@ -506,7 +505,7 @@ const App = () => {
                 q: "Do I need to replace staff?",
                 a: "Not at all — AI enhances your team, not replaces them."
               }
-            ].map((item, index) => (
+            ].map((item, index) =>(
               <div key={index} className="border-b border-gray-800 pb-6">
                 <h3 className="text-xl font-semibold mb-2 text-purple-400">{item.q}</h3>
                 <p className="text-gray-300">{item.a}</p>
@@ -526,7 +525,7 @@ const App = () => {
             If you don’t see measurable automation results within 90 days, we’ll work with you for free until you do. Your investment is safe.
           </p>
           <button
-            onClick={() => setShowCalendly(true)}
+            onClick={() =>setShowCalendly(true)}
             className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Book Free Consultation
@@ -553,14 +552,14 @@ const App = () => {
             AI Automation <span className="text-purple-400">Insights</span>
           </h2>
           <div className="space-y-4 max-w-2xl mx-auto">
-            {blogs.map((blog) => (
+            {blogs.map((blog) =>(
               <div key={blog.id} className="flex items-center justify-between p-4 bg-black/50 rounded-xl border border-purple-500/20">
                 <div>
                   <p className="text-gray-300 font-semibold">{blog.title}</p>
                   <p className="text-gray-500 text-sm">{blog.date}</p>
                 </div>
                 <button
-                  onClick={() => setShowBlogModal(blog)}
+                  onClick={() =>setShowBlogModal(blog)}
                   className="text-purple-400 hover:text-purple-300 font-semibold"
                 >
                   Read More →
@@ -570,7 +569,7 @@ const App = () => {
           </div>
           <div className="text-center mt-8">
             <button
-              onClick={() => setShowServicesModal(true)}
+              onClick={() =>setShowServicesModal(true)}
               className="px-8 py-4 border-2 border-purple-500 text-purple-400 hover:bg-purple-500/20 font-semibold rounded-xl transition-all duration-300"
             >
               Explore Services
@@ -595,7 +594,7 @@ const App = () => {
                 type="text"
                 placeholder="Your Name"
                 value={formData.name}
-                onChange={(e) = /> setFormData({...formData, name: e.target.value})}
+                onChange={(e) =>setFormData({...formData, name: e.target.value})}
                 required
                 className="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
               />
@@ -603,7 +602,7 @@ const App = () => {
                 type="email"
                 placeholder="Your Email"
                 value={formData.email}
-                onChange={(e) = /> setFormData({...formData, email: e.target.value})}
+                onChange={(e) =>setFormData({...formData, email: e.target.value})}
                 required
                 className="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
               />
@@ -633,13 +632,13 @@ const App = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <button
-              onClick={() => setShowCalendly(true)}
+              onClick={() =>setShowCalendly(true)}
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg"
             >
               🚀 Book Free Consultation
             </button>
             <button
-              onClick={() => scrollToSection('packages')}
+              onClick={() =>scrollToSection('packages')}
               className="px-8 py-4 border-2 border-purple-500 text-purple-400 hover:bg-purple-500/20 font-semibold rounded-xl transition-all duration-300 text-lg"
             >
               📦 Choose My Package
@@ -657,7 +656,7 @@ const App = () => {
           >
             <div className="p-8 md:p-10">
               <button
-                onClick={() => setShowServicesModal(false)}
+                onClick={() =>setShowServicesModal(false)}
                 className="float-right text-2xl font-bold text-slate-500 hover:text-slate-700 ml-auto"
               >
                 ×
@@ -670,7 +669,7 @@ const App = () => {
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-10">
-                {services.map((service, index) => (
+                {services.map((service, index) =>(
                   <div key={index} className="flex items-start space-x-3">
                     <span className="text-2xl mt-1">{service.icon}</span>
                     <div>
@@ -684,7 +683,7 @@ const App = () => {
               <div className="mb-10">
                 <h3 className="text-2xl font-bold mb-4 text-slate-900">📦 Package Options</h3>
                 <div className="space-y-3">
-                  {packagesTeaser.map((pkg) => (
+                  {packagesTeaser.map((pkg) =>(
                     <div key={pkg} className="text-slate-700">
                       • <span className="font-semibold">{pkg}</span> — {packageDescriptions[pkg]}
                     </div>
@@ -722,7 +721,7 @@ const App = () => {
           >
             <div className="p-8 md:p-10 flex-1 overflow-y-auto">
               <button
-                onClick={() => setShowBlogModal(null)}
+                onClick={() =>setShowBlogModal(null)}
                 className="float-right text-2xl font-bold text-slate-500 hover:text-slate-700 ml-auto"
               >
                 ×
@@ -738,7 +737,7 @@ const App = () => {
             <div className="p-8 md:p-10 bg-slate-50 border-t border-slate-200">
               <p className="text-slate-700 mb-4 text-center">👉 Inspired? Let’s apply this to your business.</p>
               <button
-                onClick={() => {
+                onClick={() =>{
                   setShowBlogModal(null);
                   setShowCalendly(true);
                 }}
@@ -758,7 +757,7 @@ const App = () => {
             <div className="p-6 border-b border-purple-500/20 flex justify-between items-center">
               <h3 className="text-2xl font-bold text-white">Schedule Your Free Consultation</h3>
               <button
-                onClick={() => setShowCalendly(false)}
+                onClick={() =>setShowCalendly(false)}
                 className="text-gray-400 hover:text-white text-2xl"
               >
                 ×
@@ -787,7 +786,7 @@ const App = () => {
                   Book 30-Minute Call
                 </a>
                 <button
-                  onClick={() => setShowCalendly(false)}
+                  onClick={() =>setShowCalendly(false)}
                   className="flex-1 text-center px-6 py-3 border border-gray-600 text-gray-300 hover:bg-gray-800 font-semibold rounded-xl transition-all duration-300"
                 >
                   Maybe Later
@@ -805,7 +804,7 @@ const App = () => {
             <div className="p-6 border-b border-purple-500/20 flex justify-between items-center">
               <h3 className="text-2xl font-bold text-white">Download Your Free Guide</h3>
               <button
-                onClick={() => setShowLeadMagnet(false)}
+                onClick={() =>setShowLeadMagnet(false)}
                 className="text-gray-400 hover:text-white text-2xl"
               >
                 ×
@@ -825,7 +824,7 @@ const App = () => {
                     type="text"
                     placeholder="Your Name"
                     value={formData.name}
-                    onChange={(e) = /> setFormData({...formData, name: e.target.value})}
+                    onChange={(e) =>setFormData({...formData, name: e.target.value})}
                     required
                     className="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
                   />
@@ -833,7 +832,7 @@ const App = () => {
                     type="email"
                     placeholder="Your Email"
                     value={formData.email}
-                    onChange={(e) = /> setFormData({...formData, email: e.target.value})}
+                    onChange={(e) =>setFormData({...formData, email: e.target.value})}
                     required
                     className="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
                   />
@@ -863,7 +862,7 @@ const App = () => {
               Magnates Agency
             </div>
             <div className="flex space-x-6">
-              {['LinkedIn', 'Instagram', 'Facebook'].map((social) => (
+              {['LinkedIn', 'Instagram', 'Facebook'].map((social) =>(
                 <a
                   key={social}
                   href="#"
@@ -875,11 +874,11 @@ const App = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-sm">
-            {['Home', 'Packages', 'Contact', 'Privacy', 'Terms'].map((link) => (
+            {['Home', 'Packages', 'Contact', 'Privacy', 'Terms'].map((link) =>(
               <a
                 key={link}
                 href="#"
-                onClick={(e) => {
+                onClick={(e) =>{
                   e.preventDefault();
                   if (link === 'Contact') {
                     setShowCalendly(true);
@@ -900,7 +899,7 @@ const App = () => {
       {/* Sticky Bottom CTA */}
       <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40">
         <button
-          onClick={() => setShowCalendly(true)}
+          onClick={() =>setShowCalendly(true)}
           className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 text-lg min-w-48"
         >
           Book Free Consultation
