@@ -167,12 +167,13 @@ const App = () =>{
       <div className="fixed inset-0 z-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-500 to-green-400 animate-pulse"></div>
       </div>
-
       {/* Header */}
       <header className="relative z-30 px-6 py-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
-            Magnates Agency
+         <img 
+  src="/logo.png" 
+  alt="Magnates Agency Logo" 
+  className="h-10 w-auto"/>
           </div>
           <nav className="hidden md:flex space-x-8">
             {['Home', 'Packages', 'Case Studies', 'About', 'Contact'].map((item) =>(
